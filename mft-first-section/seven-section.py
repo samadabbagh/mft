@@ -4,10 +4,10 @@ print(secret)
 while True:
     number = int(input("enter your number"))
     if number > secret:
-        print("adad kochiktar vared kon")
+        print("enter smaller number")
     elif number < secret:
-        print("adad bozorgtar vared kon")
+        print("enter bigger number")
     else:
         print("you win")
         break
-    print("try again")
+
