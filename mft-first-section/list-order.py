@@ -1,7 +1,5 @@
 lst = []
 while True:
-
-
     number = int(input("enter your number :"))
     list.append(lst, number)
 
