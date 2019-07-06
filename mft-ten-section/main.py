@@ -1,9 +1,17 @@
-import re
-f = open('majur')
-text = f.read()
-f.close()
+def decorate(fn):
+    def inner(x):
+        out = "$"
+        out += fn(x)
+        out += "$"
+        return out
 
-pattern = r"O\s+(.+?)![\.,]?\s+[EXALTED].*O|s+(.+?![\.,]\s+KEEP"
+    return inner
 
-result = re.findall(pattern, text)
-print(result)
+
+@decorate
+def say_hello(name):
+    return "Hello " + name
+
+
+res = say_hello("Jack")
+print(res)
