@@ -27,6 +27,7 @@ def blue(fn):
 
     return inner_3
 
+
 def bold(l):
     def bold_inner(w):
         out = "\033[3;1m"
@@ -76,10 +77,8 @@ def exaggerate(j):
 
     return exaggerate_inner
 
-
-@bold
-@revert
 @red
+@bold
 def echo(s):
     return "hello " + s
 
